@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "users")
 public class user {
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id")
+    @ColumnInfo(name = "index")
     private int id;
     @ColumnInfo(name = "name")
     private String name;

@@ -49,10 +49,9 @@ public class MainActivity extends AppCompatActivity {
     public void addUser () {
         user u = new user(name.getText().toString(),location.getText().toString());
         ad.uDao().insertUser(u);
+        ad.uDao().addUser(u);
         Toast.makeText(this,"new user has been added",Toast.LENGTH_LONG).show();
-        finish();
-        overridePendingTransition(0, 0);
-        startActivity(getIntent());
+        this.listViewAdapter.clear();
         displayUsers();
     }
 
